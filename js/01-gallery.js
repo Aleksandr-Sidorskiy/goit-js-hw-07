@@ -28,12 +28,19 @@ function createGallereyCard(galleryItems) {
 }
 
 function handGalleryClick(event) {
-    const isGalleryEl = event.target.classList.contains('.gallery__item');
+  event.preventDefault();
+    const isGalleryEl = event.target.classList.contains('.gallery__image');
     
     if (isGalleryEl) {
         return ;
     }
- 
-  return  event.target.dataset.original;
+  const image = event.target;
+  return basicLightbox.create(`<img width="1280", heigth="800", 
+  src="${image.dataset.source}">`).show()
     
 }
+document.addEventListener('keydown', (e) => {
+  e.preventDefault();
+  if (e.code === 'Escape')
+  { return document};
+  }); 
