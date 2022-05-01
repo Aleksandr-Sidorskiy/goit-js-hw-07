@@ -39,8 +39,3 @@ function handGalleryClick(event) {
   src="${image.dataset.source}">`).show()
     
 }
-document.addEventListener('keydown', (e) => {
-  e.preventDefault();
-  if (e.code === 'Escape')
-  { return document};
-  }); 
