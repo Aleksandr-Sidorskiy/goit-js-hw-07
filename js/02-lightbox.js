@@ -7,7 +7,7 @@ const addGalleryItems = document.querySelector('.gallery');//поиск клас
 const galleryMarkup = createGallereyCard(galleryItems);//ссылка на createGallereyCard
 addGalleryItems.insertAdjacentHTML("beforeend", galleryMarkup);//добавление елементов
 // Реализация делегирования на div.gallery и получение url большого изображения.
-addGalleryItems.addEventListener("click", handGalleryClick);
+// addGalleryItems.addEventListener("click", handGalleryClick);
 
 // создание шаблоной разметки
 function createGallereyCard(galleryItems) {
@@ -23,15 +23,12 @@ function createGallereyCard(galleryItems) {
         .join(''); 
 }
 
-function handGalleryClick(event) {
-  event.preventDefault();
-    const isGalleryEl = event.target.classList.contains('.gallery__image');
+// function handGalleryClick(event) {
+//   event.preventDefault();
+//     const isGalleryEl = event.target.classList.contains('.gallery__image');
     
-    if (isGalleryEl) {
-        return ;
-    }
-  const image = event.target;
-
-    
-}
+//     if (isGalleryEl) {
+//         return ;
+//     }
+// }
 var lightbox = new SimpleLightbox('.gallery a', {captionsData: "alt", captionPosition: 'bottom', captionDelay: 250, });
